@@ -14,7 +14,7 @@ public class Main {
         
         boolean exitMenu = false;
         int menuOption = 0;
-        //1. Intance for execution 
+        //1. Instance for execution 
         Exercise1 exercise1Instance = new Exercise1();
         Exercise2 exercise2Instance = new Exercise2();
         Exercise3 exercise3Instance = new Exercise3();
@@ -22,7 +22,8 @@ public class Main {
         Exercise5 exercise5Instance = new Exercise5();
         Exercise6 exercise6Instance = new Exercise6();
         Exercise7 exercise7Instance = new Exercise7();
-        // loop for menu input    
+        
+        // Loop for menu input    
         while(!exitMenu){
           System.out.println("SELECCIONE UNA OPCIÓN.");
           System.out.println("""
@@ -62,10 +63,12 @@ public class Main {
                     exercise7Instance.characterFinder();
                     break;
                 case 8:
-                    //Cuando la variable exitMenu toma este valor, deja de ingresar al while
+                    //Stop the program by change the value of ExitMenu to true and print a exit msg 
                     exitMenu = true;
                     System.out.println("El programa ha finalizado.");
+                    //Break and finish the  loop after exit the program
                     break;
+               // Any other option input print a msg which only accept inputys from 1 to 8
                 default:
                     System.out.println("Sólo se admiten opciones entre 1 y 8.\n");
             }
